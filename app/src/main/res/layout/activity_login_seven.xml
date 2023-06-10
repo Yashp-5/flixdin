@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginSevenActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="413dp"
+        android:layout_height="42dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/arrowback" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="357dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="When is your birthday?"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="357dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="23dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Please use your own date of birth even if this is for a business or some other purpose. No one will see this on your profile."
+        android:textColor="#2B0000"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="359dp"
+        android:textColorHint="#A4A4A4"
+
+        android:layout_height="60.16dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="27dp"
+        android:background="@drawable/box2"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:inputType="textMultiLine|text"
+        android:paddingLeft="40dp"
+        android:hint="Birthday\nMay 15, 2002"
+        android:textColor="#A4A4A4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="359dp"
+        android:layout_height="60.16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="272dp"
+        android:backgroundTint="@color/gold"
+        android:fontFamily="@font/inter_medium"
+        android:text="Next"
+        android:textColor="#5B4E07"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintVertical_bias="0.0"
+        app:strokeColor="@color/gold" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+
+        android:layout_width="359dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="29dp"
+
+
+        android:layout_marginEnd="24dp"
+
+        android:layout_marginBottom="28dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="Already have an account"
+        android:textColor="#A4A4A4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#A4A4A4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

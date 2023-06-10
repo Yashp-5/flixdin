@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginNineActivity">
+
+    <include layout="@layout/toolbar_custom"
+        android:id="@+id/toolbar"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Agree to flixdin's terms and policies"
+            android:textColor="#000000"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="346dp"
+
+            android:layout_height="224dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="23dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="People who use our service may have already entered your number. \n\nBy clicking on I agree, you agree to create an account and to Instagram. Learn More\n\nThe Privacy Policy describes the ways we can use the information we collect when you create an account. For example, we use this information to provide, personalize and improve our products, including ads."
+            android:textColor="#2B0000"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+
+            android:id="@+id/button2"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60.16dp"
+
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="272dp"
+            android:backgroundTint="@color/gold"
+            android:fontFamily="@font/inter_semibold"
+
+            android:text="I Agree"
+            android:textColor="#5B4E07"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintVertical_bias="0.179"
+            app:strokeColor="@color/gold" />
+
+        <Button
+            android:id="@+id/button3"
+            app:strokeColor="#A4A4A4"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+
+            android:layout_width="359dp"
+            android:layout_height="48dp"
+
+
+            android:layout_marginEnd="24dp"
+
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Already have an account"
+            android:textColor="#A4A4A4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

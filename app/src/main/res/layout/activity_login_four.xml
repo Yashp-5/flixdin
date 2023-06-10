@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginFourActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/toolbar_custom"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="357dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="What's your name?"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+
+            android:layout_width="359dp"
+            android:layout_height="60.16dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="27dp"
+            android:background="@drawable/box2"
+            android:ems="10"
+            android:fontFamily="@font/inter_medium"
+            android:inputType="textPersonName"
+            android:paddingLeft="40dp"
+            android:hint="Full name"
+            android:textColorHint="#A4A4A4"
+            android:textColor="#A4A4A4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="359dp"
+            android:layout_height="60.16dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="416dp"
+            android:backgroundTint="@color/gold"
+            android:fontFamily="@font/inter_medium"
+            android:text="Next"
+            android:textColor="#5B4E07"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/gold" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="359dp"
+
+            android:layout_height="48dp"
+            android:layout_marginStart="28dp"
+
+
+            android:layout_marginEnd="24dp"
+
+            android:layout_marginBottom="28dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Already have an account"
+            android:textColor="#A4A4A4"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#A4A4A4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

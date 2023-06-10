@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Flixdin"
+        tools:targetApi="31">
+        <activity
+            android:name=".LoginTenActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginNineActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".LoginEightActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".LoginSevenActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".LoginSixActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginFiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginFourActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginThreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginTwoActivity"
+            android:exported="true" />
+        <activity
+            android:name=".LoginOneActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".LandingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
