@@ -15,6 +15,10 @@ public class UserModel {
     private String gender;
     private String bio;
 
+    private ArrayList<UserModel> followers;
+
+    private ArrayList<UserModel> following;
+
 
     public UserModel(String userID, String emailID, String fullname,
                      String username, String birthday, String domain,
@@ -113,5 +117,15 @@ public class UserModel {
 
     public void setBio(String bio) {
         this.bio = bio;
+    }
+
+    // Also create functions to add/ remove followers/ following from the list
+
+    public ArrayList<UserModel> getFollowers() {
+        return followers;
+    }
+
+    public ArrayList<UserModel> getFollowing() {
+        return following;
     }
 }
