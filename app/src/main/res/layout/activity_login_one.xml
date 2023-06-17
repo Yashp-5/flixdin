@@ -7,66 +7,68 @@
     tools:context=".LoginOneActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="191dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="106dp"
+        android:id="@+id/flixdin_text"
+        android:layout_width="216dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="100dp"
+
+        android:layout_marginBottom="80dp"
+        android:transitionName="starting_screen"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/flixdin" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/email"
         android:layout_width="359dp"
         android:layout_height="60.14dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="26dp"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/box"
-        android:ems="10"
 
+        android:ems="10"
         android:fontFamily="@font/inter_medium"
         android:hint="Email"
         android:inputType="textPersonName"
         android:padding="10dp"
         android:textColor="#C6B34E"
+
         android:textColorHint="@color/gold"
+        android:transitionName="starting_screen2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
 
-        app:hintTextAppearance="@style/GreenTextInputLayout"
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="359dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="11dp"
+
         android:layout_marginEnd="26dp"
+
         android:background="@drawable/box"
+
 
         android:ems="10"
 
+
         android:fontFamily="@font/inter_medium"
-
-
         android:padding="10dp"
-
-
-
-
+        app:hintTextAppearance="@style/GreenTextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/email"
         app:passwordToggleEnabled="true"
-        app:passwordToggleTint="#978839"
-      >
+        app:passwordToggleTint="#978839">
 
         <EditText
             android:id="@+id/passText"
@@ -74,10 +76,10 @@
             android:layout_height="match_parent"
             android:background="@drawable/passbox"
 
-            android:text="Password"
-
-
             android:inputType="textPassword"
+
+
+            android:text="Password"
             android:textColor="@color/gold"
 
             android:textSize="14sp" />
@@ -89,63 +91,71 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="268dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/inter_medium"
         android:text="Forgot Password"
         android:textColor="#C6B34E"
         android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <Button
-        android:id="@+id/button"
+
+        android:id="@+id/login_button"
         android:layout_width="359dp"
         android:layout_height="48dp"
         android:layout_marginStart="26dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginTop="10dp"
 
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="2dp"
         android:background="@drawable/box"
         android:backgroundTint="@color/gold"
+        android:fontFamily="@font/inter_semibold"
         android:text="LOGIN"
         android:textColor="#5B4E07"
         android:textSize="24dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-        app:layout_constraintVertical_bias="0.959"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:strokeColor="@color/gold" />
 
     <Button
+        android:id="@+id/signup_button"
 
-        android:id="@+id/button5"
         android:layout_width="359dp"
         android:layout_height="48dp"
         android:layout_marginStart="26dp"
+        android:layout_marginTop="2dp"
+
         android:layout_marginEnd="24dp"
+        android:layout_marginBottom="150dp"
 
-        android:layout_marginBottom="76dp"
         android:background="@drawable/box"
+        android:fontFamily="@font/inter_semibold"
 
-        android:fontFamily="@font/inter_medium"
+
         android:text="Sign Up"
 
-
         android:textColor="#5B4E07"
-
         android:textSize="24dp"
+
+
         android:textStyle="bold"
-
-
+        android:transitionName="starting_screen2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:strokeColor="#A4A4A4" />
 
     <ImageView
@@ -153,14 +163,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="97dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="2dp"
         android:src="@drawable/or"
-        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintBottom_toTopOf="@+id/signup_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/login_button" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

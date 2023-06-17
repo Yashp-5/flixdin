@@ -4,39 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginThreeActivity">
+    tools:context=".MobileConfirmationActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="413dp"
-        android:layout_height="42dp"
-        android:orientation="vertical"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <ImageView
-            android:layout_width="81dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/arrowback" />
-
-
-    </LinearLayout>
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrowback"/>
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="357dp"
         android:layout_height="49dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="21dp"
         android:fontFamily="@font/inter_medium"
         android:text="Enter the confirmation code"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <TextView
         android:id="@+id/textView3"
@@ -47,7 +48,7 @@
         android:layout_marginEnd="23dp"
         android:fontFamily="@font/inter_medium"
         android:text="To confirm you account, please enter the code that we have sent to you no."
-        android:textColor="#2B0000"
+        android:textColor="@color/text_color"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,16 +91,16 @@
     <Button
         app:strokeColor="@color/gold"
         style="@style/Widget.Material3.Button.OutlinedButton"
-        android:id="@+id/button2"
+        android:id="@+id/next_button"
         android:layout_width="359dp"
         android:layout_height="60.16dp"
         android:layout_marginStart="28dp"
         android:layout_marginBottom="272dp"
         android:backgroundTint="@color/gold"
-        android:fontFamily="@font/inter_medium"
+        android:fontFamily="@font/inter_semibold"
         android:text="Next"
         android:textColor="#5B4E07"
-        android:textSize="20sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"

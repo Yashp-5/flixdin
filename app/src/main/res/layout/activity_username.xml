@@ -4,20 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginEightActivity">
+    tools:context=".UsernameActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <include layout="@layout/toolbar_custom"
-            android:id="@+id/toolbar"/>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="357dp"
             android:layout_height="49dp"
             android:layout_marginStart="22dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="17dp"
             android:layout_marginEnd="32dp"
             android:fontFamily="@font/inter_medium"
             android:text="Create a username"
@@ -25,8 +23,9 @@
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/editTextTextPersonName3"
@@ -64,18 +63,20 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/next_button"
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="359dp"
             android:layout_height="60.16dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="48dp"
             android:layout_marginEnd="28dp"
+            android:layout_marginBottom="340dp"
             android:backgroundTint="@color/gold"
             android:fontFamily="@font/inter_medium"
             android:text="Next"
             android:textColor="#5B4E07"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
@@ -101,6 +102,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:strokeColor="#A4A4A4" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrowback"/>
+        </androidx.appcompat.widget.Toolbar>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".test">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/toolbar_custom"
+            android:id="@+id/toolbar"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="357dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="36dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Add Domain"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="357dp"
+
+            android:layout_height="42dp"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="23dp"
+            android:fontFamily="@font/inter_medium"
+            android:text="Domain describes your main profession.\n
+You can only select one domain."
+            android:textColor="#978839"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <com.google.android.material.button.MaterialButton
+
+            android:id="@+id/next_button"
+
+            android:layout_width="359dp"
+            android:layout_height="60.16dp"
+            android:layout_marginStart="20dp"
+
+
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="28dp"
+
+            android:background="@drawable/box"
+            android:backgroundTint="@color/gold"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Add Domain"
+            android:textColor="#5B4E07"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/gold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="343dp"
+            android:layout_height="38.2dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/spinner_box"
+            android:backgroundTint="@color/gold"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <ScrollView
+            android:layout_width="322dp"
+            android:layout_height="425dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:paddingLeft="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+                    <RadioButton
+                        android:id="@+id/Actor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:onClick="doTask1"
+                        android:paddingLeft="40dip"
+                        android:text="Actor"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/Animation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:drawablePadding="104dp"
+                        android:onClick="doTask1"
+                        android:paddingLeft="40dip"
+                        android:text="Animation"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/Art_director"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:onClick="doTask1"
+                        android:paddingLeft="40dip"
+                        android:text="Art Director"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/Cinematographer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:onClick="doTask1"
+                        android:paddingLeft="40dip"
+                        android:text="Cinematographer"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/Director"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:onClick="doTask1"
+                        android:paddingLeft="40dip"
+                        android:text="Director"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/Editor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableRight="@android:drawable/btn_radio"
+                        android:onClick="doTask1"
+                        android:paddingLeft="40dip"
+                        android:text="Editor"
+                        android:textColor="#000000" />
+
+
+
+                </RadioGroup>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</RelativeLayout>
