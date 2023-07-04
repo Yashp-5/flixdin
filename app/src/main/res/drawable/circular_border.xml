@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" /> <!-- Transparent background -->
+    <stroke
+        android:color="#978839"
+        android:width="2dp" /> <!-- Border width -->
+    <padding
+        android:left="2dp"
+        android:top="2dp"
+        android:right="2dp"
+        android:bottom="2dp" /> <!-- Adjust padding to control border width -->
+    <corners android:radius="60dp" /> <!-- Increased radius -->
+</shape>
+
+
+
+
