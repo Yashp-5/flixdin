@@ -4,41 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DomainActivity">
+    tools:context=".DomainActivity"
+    android:background="@color/bg">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <include layout="@layout/toolbar_custom"
-            android:id="@+id/toolbar"/>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/arrowback"/>
+        </androidx.appcompat.widget.Toolbar>
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="357dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/inter_medium"
             android:text="Add Domain"
-            android:textColor="#000000"
+            android:textColor="@color/text_color"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+            app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="357dp"
 
             android:layout_height="42dp"
-            android:layout_marginStart="27dp"
+            android:layout_marginStart="28dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="23dp"
             android:fontFamily="@font/inter_medium"
-            android:text="Domain describes your main profession.\n
-You can only select one domain."
+            android:text="Domain describes your main profession.\nYou can only select one domain."
             android:textColor="#978839"
             android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -48,16 +63,17 @@ You can only select one domain."
 
             android:layout_width="359dp"
             android:layout_height="60.16dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="28dp"
 
 
-            android:layout_marginEnd="32dp"
             android:layout_marginBottom="28dp"
-
             android:background="@drawable/box"
+
             android:backgroundTint="@color/gold"
             android:fontFamily="@font/inter_semibold"
             android:text="Add Domain"
+            android:textAllCaps="false"
             android:textColor="#5B4E07"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -66,146 +82,341 @@ You can only select one domain."
             app:layout_constraintStart_toStartOf="parent"
             app:strokeColor="@color/gold" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="343dp"
-            android:layout_height="38.2dp"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/spinner_box"
-            android:backgroundTint="@color/gold"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
+        <RelativeLayout
 
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-        <ScrollView
-            android:layout_width="322dp"
-            android:layout_height="425dp"
+            android:id="@+id/domain_select"
+            android:layout_width="324dp"
+            android:layout_height="50dp"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="1dp"
-            android:paddingLeft="4dp"
+            android:background="@drawable/box"
+            android:backgroundTint="@color/gold"
+            android:orientation="horizontal"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/domain_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="@font/inter_semibold"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Add Domain"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:id="@+id/down_arrow"
+                android:layout_width="38dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+
+                android:src="@drawable/baseline_arrow_drop_down_24" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="359dp"
+
+            android:layout_height="380dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/next_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/domain_select">
+
+            <ScrollView
+
+
+                android:id="@+id/scroll_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="match_parent"
 
-                <RadioGroup
+                android:layout_marginTop="1dp"
+                android:fillViewport="true"
+                android:paddingLeft="4dp"
+                android:visibility="invisible">
 
-                    android:background="#FAFAFA"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="400dp"
-                    android:layout_marginTop="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/Actor"
-                        android:fontFamily="@font/inter_semibold"
-                        android:textSize="14sp"
+                    <RadioGroup
+                        android:id="@+id/radio_group"
+
 
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@null"
-                        android:checked="true"
-                        android:drawableRight="@android:drawable/btn_radio"
+                        android:layout_height="match_parent"
 
-                        android:paddingLeft="10dip"
-                        android:text="Actor"
-                        android:textColor="#000000" />
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/box"
 
-                    <RadioButton
-                        android:id="@+id/Animation"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:textSize="14sp"
-                        android:button="@null"
-                        android:checked="true"
-                        android:drawableRight="@android:drawable/btn_radio"
+                        android:backgroundTint="@color/domain_radio"
 
-                        android:paddingLeft="10dip"
-                        android:text="Animation"
-                        android:textColor="#000000" />
+                        android:orientation="vertical"
+                        android:padding="4dp"
+                        android:scrollbars="vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/domain_select">
 
-                    <RadioButton
-                        android:fontFamily="@font/inter_semibold"
-                        android:textSize="14sp"
-                        android:id="@+id/Art_director"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:button="@null"
-                        android:checked="true"
-                        android:drawableRight="@android:drawable/btn_radio"
+                        <RadioButton
 
-                        android:paddingLeft="10dip"
-                        android:text="Art Director"
-                        android:textColor="#000000" />
+                            android:id="@+id/Actor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
 
-                    <RadioButton
-                        android:id="@+id/Cinematographer"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:textSize="14sp"
-                        android:button="@null"
-                        android:checked="true"
-                        android:drawableRight="@android:drawable/btn_radio"
-
-                        android:paddingLeft="10dip"
-                        android:text="Cinematographer"
-                        android:textColor="#000000" />
-
-                    <RadioButton
-                        android:id="@+id/Director"
-                        android:layout_width="match_parent"
-                        android:fontFamily="@font/inter_semibold"
-                        android:textSize="14sp"
-                        android:layout_height="wrap_content"
-                        android:button="@null"
-                        android:checked="true"
-                        android:drawableRight="@android:drawable/btn_radio"
-
-                        android:paddingLeft="10dip"
-                        android:text="Director"
-                        android:textColor="#000000" />
-
-                    <RadioButton
-                        android:id="@+id/Editor"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/inter_semibold"
-                        android:textSize="14sp"
-                        android:button="@null"
-                        android:checked="true"
-                        android:drawableRight="@android:drawable/btn_radio"
-                        android:paddingLeft="10dip"
-                        android:text="Editor"
-                        android:textColor="#000000"
-                        android:drawableTint="@color/black"
-
-                        />
+                            android:checked="true"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
 
 
+                            android:onClick="checkButton"
 
-                </RadioGroup>
-            </LinearLayout>
+                            android:paddingLeft="10dip"
+                            android:text="Actor"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
 
-        </ScrollView>
+                        <RadioButton
+                            android:id="@+id/Animation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+
+                            android:paddingLeft="10dip"
+                            android:text="Animation"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Art_director"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+
+                            android:paddingLeft="10dip"
+                            android:text="Art Director"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Cinematographer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+
+                            android:paddingLeft="10dip"
+                            android:text="Cinematographer"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Director"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+
+                            android:paddingLeft="10dip"
+                            android:text="Director"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Editor"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Editor"
+                            android:textColor="@color/text_color"
+
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Film_gear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Film Gear"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Film_critic"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Film Critic"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Music_director"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Music Director"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Producer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Producer"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Production_house"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Production House"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Screen_writer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Screenwriter"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Sound_designer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Sound Designer"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/VFX_artist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="VFX Artist"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/Writer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="false"
+                            android:drawableRight="@android:drawable/btn_radio"
+                            android:drawableTint="@color/text_color"
+                            android:fontFamily="@font/inter_semibold"
+                            android:onClick="checkButton"
+                            android:paddingLeft="10dip"
+                            android:text="Writer"
+                            android:textColor="@color/text_color"
+                            android:textSize="14sp" />
+
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 
 
 </RelativeLayout>

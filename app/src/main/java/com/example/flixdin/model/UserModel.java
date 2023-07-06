@@ -10,7 +10,6 @@ public class UserModel {
     private String username;
     private String birthday;
     private String domain;
-    private ArrayList<String> preferences;
     private String location;
     private String gender;
     private String bio;
@@ -22,15 +21,13 @@ public class UserModel {
 
     public UserModel(String userID, String emailID, String fullname,
                      String username, String birthday, String domain,
-                     ArrayList<String> preferences, String location,
-                     String gender, String bio) {
+                     String location, String gender, String bio) {
         this.userID = userID;
         this.emailID = emailID;
         this.fullname = fullname;
         this.username = username;
         this.birthday = birthday;
         this.domain = domain;
-        this.preferences = preferences;
         this.location = location;
         this.gender = gender;
         this.bio = bio;
@@ -85,14 +82,6 @@ public class UserModel {
 
     public void setDomain(String domain) {
         this.domain = domain;
-    }
-
-    public ArrayList<String> getPreferences() {
-        return preferences;
-    }
-
-    public void setPreferences(ArrayList<String> preferences) {
-        this.preferences = preferences;
     }
 
     public String getLocation() {

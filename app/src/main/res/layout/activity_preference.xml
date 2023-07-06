@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DomainActivity">
+    tools:context=".DomainActivity"
+    android:background="@color/bg">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -34,7 +35,7 @@
             android:layout_marginTop="17dp"
             android:fontFamily="@font/inter_medium"
             android:text="Add Top Preference Connections"
-            android:textColor="#000000"
+            android:textColor="@color/text_color"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
