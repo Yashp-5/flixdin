@@ -11,4 +11,7 @@
     <color name="gold">#C6B34E</color>
     <color name="dark_gold">#978839</color>
     <color name="background">#FFFADD</color>
+    <color name="connectionCallBG">#F3E59D</color>
+    <color name="lightGold">#E7DA95</color>
+    <color name="grey_bg">#CBC8BA</color>
 </resources>
