@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BirthdayActivity"
+    tools:context=".ResetPassActivity"
     android:background="@color/bg">
 
 
@@ -13,72 +13,123 @@
         android:layout_width="357dp"
         android:layout_height="49dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/inter_medium"
-        android:text="When is your birthday?"
+        android:text="Reset Your Password"
         android:textColor="@color/text_color"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="357dp"
-        android:layout_height="wrap_content"
+        android:layout_height="42dp"
         android:layout_marginStart="27dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="23dp"
         android:fontFamily="@font/inter_medium"
-        android:text="Please use your own date of birth even if this is for a business or some other purpose. No one will see this on your profile."
+        android:text="Create your new password and confirm it to get back into your account."
         android:textColor="@color/text_color"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:focusable="false"
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/bday_text"
         android:layout_width="359dp"
-        android:textColorHint="#A4A4A4"
-        android:layout_height="60.16dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="27dp"
-        android:background="@drawable/box2"
-        android:ems="10"
+        app:boxBackgroundMode="none"
+        android:layout_height="64.14dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="26dp"
         android:fontFamily="@font/inter_medium"
-        android:paddingLeft="40dp"
-        android:hint="Birthday\nMay 15, 2002"
-        android:textColor="#A4A4A4"
+        app:hintTextAppearance="@style/GreenTextInputLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#978839">
+
+        <EditText
+            android:id="@+id/passText"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/inter_semibold"
+            android:layout_height="match_parent"
+            android:background="@drawable/box2"
+            android:padding="4dp"
+
+            android:inputType="textPassword"
+
+
+            android:hint="New Password"
+            android:textColor="#A4A4A4"
+
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="359dp"
+        app:boxBackgroundMode="none"
+        android:layout_height="64.14dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="27dp"
+
+
+
+
+        android:fontFamily="@font/inter_medium"
+
+        app:hintTextAppearance="@style/GreenTextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="#978839">
+
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/box2"
+            android:padding="4dp"
+            android:fontFamily="@font/inter_semibold"
+
+            android:inputType="textPassword"
+
+
+            android:hint="Confirm Password"
+            android:textColor="#A4A4A4"
+
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
+
         android:id="@+id/next_button"
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="359dp"
         android:layout_height="60.16dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="40dp"
+
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="272dp"
         android:backgroundTint="@color/gold"
         android:fontFamily="@font/inter_medium"
+
+
         android:text="Next"
         android:textColor="#5B4E07"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bday_text"
-        app:layout_constraintVertical_bias="0.0"
         app:strokeColor="@color/gold" />
 
     <Button
@@ -87,7 +138,7 @@
 
         android:layout_width="359dp"
         android:layout_height="48dp"
-        android:layout_marginStart="29dp"
+        app:strokeColor="#A4A4A4"
 
 
         android:layout_marginEnd="24dp"
@@ -98,22 +149,20 @@
         android:textColor="#A4A4A4"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#A4A4A4" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar3"
+        android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
-        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
+
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

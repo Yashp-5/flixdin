@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PictureActivity">
+    tools:context=".PictureActivity"
+    android:background="@color/bg">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
@@ -32,7 +33,7 @@
         android:layout_marginTop="17dp"
         android:fontFamily="@font/inter_medium"
         android:text="Add a profile picture"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,7 @@
         android:layout_marginEnd="23dp"
         android:fontFamily="@font/inter_medium"
         android:text="Add a profile picture so that your friends can see that it’s you!"
-        android:textColor="#2B0000"
+        android:textColor="@color/text_color"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,9 +63,8 @@
         android:layout_height="60.16dp"
 
 
-
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="26dp"
         android:layout_marginBottom="24dp"
 
         android:backgroundTint="@color/gold"
@@ -75,7 +75,8 @@
         app:layout_constraintBottom_toTopOf="@+id/skip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="@color/gold" />
+        app:strokeColor="@color/gold"
+        />
 
     <Button
         android:id="@+id/skip"
@@ -98,19 +99,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:strokeColor="#A4A4A4" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView5"
-        android:layout_width="216dp"
-        android:layout_height="216dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginBottom="156dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
+    <LinearLayout
+        android:paddingRight="24dp"
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="100dp"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/next_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.466"
-        app:layout_constraintStart_toStartOf="parent"
-        app:shapeAppearanceOverlay="@style/circleImageView"
-        app:srcCompat="@drawable/profile" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="249dp"
+            android:layout_height="249dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profile" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

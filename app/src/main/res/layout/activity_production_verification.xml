@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductionVerificationActivity"
+    android:background="@color/bg">
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="359dp"
+        android:layout_height="60.19dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="28dp"
+
+        android:background="@drawable/box2"
+        android:fontFamily="@font/inter_semibold"
+        android:text="Already have an account"
+        android:textAllCaps="false"
+
+        android:textColor="#5B4E07"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#A4A4A4" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrowback"/>
+        <LinearLayout
+
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:layout_height="match_parent"
+                android:text="Verification Page"
+                android:textSize="24dp"
+                android:textColor="@color/gold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Production house"
+                android:textColor="@color/gold"
+                android:fontFamily="@font/inter_semibold"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="Name"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+    <TextView
+        android:id="@+id/office_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="Office Address"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <TextView
+        android:id="@+id/no_films"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="No of films produced"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+    <TextView
+        android:id="@+id/filmography"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="Filmography"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+    <TextView
+        android:id="@+id/youtube_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="Youtube Link"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+
+    <TextView
+        android:id="@+id/website_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="Website Link"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+    <TextView
+        android:id="@+id/avg_budget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_semibold"
+        android:paddingLeft="4dp"
+        android:text="Produced films average budget"
+        android:textColor="@color/text_color"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:hint="Movie Dreamers"
+        android:inputType="textPersonName"
+        android:textColorHint="#7f7f7f"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Name" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:inputType="textPersonName"
+
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/office_add" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:hint="Nine"
+        android:inputType="textPersonName"
+        android:textColorHint="#7f7f7f"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no_films" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName5"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:hint="Add a breief description"
+        android:inputType="textPersonName"
+        android:textColorHint="#7f7f7f"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filmography" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:hint="https://www.youtube.com/@moviedreamers9667"
+        android:inputType="textPersonName"
+        android:textColorHint="#7f7f7f"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_link" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:hint="Add Link"
+        android:inputType="textPersonName"
+        android:textColorHint="#7f7f7f"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/website_link" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:ems="10"
+        android:fontFamily="@font/inter_medium"
+        android:inputType="textPersonName"
+
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avg_budget" />
+</androidx.constraintlayout.widget.ConstraintLayout>

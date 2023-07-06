@@ -6,66 +6,99 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class DomainActivity extends AppCompatActivity {
     Spinner spinner;
+    RadioGroup radioGroup;
+    Boolean isClicked = false;
+
+    String selectedDomain="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_domain);
         getSupportActionBar().hide();
         Button NextButton = findViewById(R.id.next_button);
+        RelativeLayout domainSelect = findViewById(R.id.domain_select);
+        ImageView arrow = findViewById(R.id.down_arrow);
+        ScrollView scrollView = findViewById(R.id.scroll_view);
+        radioGroup = findViewById(R.id.radio_group);
+
+        domainSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!isClicked)
+                {
+                    scrollView.setVisibility(View.VISIBLE);
+                    arrow.setImageResource(R.drawable.baseline_arrow_drop_up_24);
+                    isClicked=true;
+                }
+
+                else {
+                    scrollView.setVisibility(View.INVISIBLE);
+                    arrow.setImageResource(R.drawable.baseline_arrow_drop_down_24);
+                    isClicked=false;
+                }
+            }
+        });
+
+
+
+
+
         NextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(DomainActivity.this,PreferenceActivity.class);
-                startActivity(intent);
+
+                if(selectedDomain.equals(""))
+                {
+                    Toast.makeText(DomainActivity.this, "Please select a domain", Toast.LENGTH_SHORT).show();
+                }
+
+                else
+                {
+                    if (selectedDomain.equals("Production House"));
+                    {
+                        Intent i = new Intent(DomainActivity.this,ProductionVerificationActivity.class);
+                        startActivity(i);
+                    }
+                    if(!selectedDomain.equals("Production House"))
+                     {
+                    Intent intent = new Intent(DomainActivity.this,WelcomeActivity.class);
+                    startActivity(intent);
+                     }
+                }
+
+
             }
         });
     }
 
-       /* spinner = findViewById(R.id.spinner);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String item = parent.getItemAtPosition(position).toString();
-                Toast.makeText(DomainActivity.this, item, Toast.LENGTH_SHORT).show();
-            }
+    public void checkButton(View v) {
+        int radioId = radioGroup.getCheckedRadioButtonId();
+        TextView domain = findViewById(R.id.domain_text);
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+        RadioButton radioButton = findViewById(radioId);
 
-            }
-        });
+        domain.setText(radioButton.getText());
+        selectedDomain=radioButton.getText().toString();
 
-        ArrayList<String> domains = new ArrayList<>();
+       // Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(),
+        //        Toast.LENGTH_SHORT).show();
+    }
 
-
-
-        domains.add("Actor");
-        domains.add("Animator");
-        domains.add("Art Director");
-        domains.add("Cinematographer");
-        domains.add("Director");
-        domains.add("Editor");
-        domains.add("Music Director");
-        domains.add("Screen Writer");
-        domains.add("Sound Designer");
-        domains.add("VFX Artist");
-        domains.add("Writer");
-        domains.add("Producer");
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,domains);
-        adapter.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
-        spinner.setAdapter(adapter);
-
-
-
-
-
-*/
 
 
 
