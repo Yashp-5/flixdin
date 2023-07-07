@@ -112,6 +112,14 @@ public class PictureActivity extends AppCompatActivity {
 
             }
         });
+        ImageView Back =findViewById(R.id.back_button);
+        Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(PictureActivity.this,TermsActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
     @Override

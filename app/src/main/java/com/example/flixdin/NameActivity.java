@@ -31,7 +31,7 @@ public class NameActivity extends AppCompatActivity {
         NextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NameActivity.this,PasswordActivity.class);
+                Intent intent = new Intent(NameActivity.this,LoginSaveActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "790969471633",
+    "firebase_url": "https://flixdin-app-default-rtdb.firebaseio.com",
+    "project_id": "flixdin-app",
+    "storage_bucket": "flixdin-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790969471633:android:fb9ebb8bdc1e4e26e0a530",
+        "android_client_info": {
+          "package_name": "com.example.flixdin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "790969471633-m5q50k1pkuc713dsj5k5pljti0h4hjaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flixdin",
+            "certificate_hash": "d000d979baa309d7a71c83bb739d9aefb6813b4a"
+          }
+        },
+        {
+          "client_id": "790969471633-ebkgflch2lcles1pu3ckoo91prth7o9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBWCcLqxce8eeSdo_Tuka_OsSkej-MEz3s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "790969471633-ebkgflch2lcles1pu3ckoo91prth7o9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
