@@ -46,7 +46,7 @@ public class MobileNumberActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent i = new Intent(MobileNumberActivity.this,MobileConfirmationActivity.class);
+                    Intent i = new Intent(MobileNumberActivity.this,PasswordActivity.class);
                     Bundle bundle = new Bundle();
                     bundle.putString("EMAIL", email.getText().toString());
                     i.putExtras(bundle);

@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import java.util.Calendar;
 
@@ -44,10 +45,19 @@ public class BirthdayActivity extends AppCompatActivity {
                    @Override
                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 
-                       BdayText.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                       BdayText.setText(dayOfMonth+"-"+(month+1)+"-"+year);
                    }
                },year,month,day);
                 datePickerDialog.show();
+            }
+        });
+
+        ImageView Back =findViewById(R.id.back_button);
+        Back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(BirthdayActivity.this,LoginSaveActivity.class);
+                startActivity(i);
             }
         });
 
