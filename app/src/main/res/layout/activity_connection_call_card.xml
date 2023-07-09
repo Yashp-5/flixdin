@@ -8,7 +8,7 @@
     android:background="#FFFADD">
 
     <include layout="@layout/connection_call_toolbar"
-        android:id="@+id/toolbar"/>
+        android:id="@+id/connection_call_toolbar"/>
 
 
     <androidx.cardview.widget.CardView
@@ -27,12 +27,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:src="@drawable/profile_dp"
-            />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/profile_dp"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -68,24 +68,24 @@
                 android:layout_marginLeft="5dp"
                 app:cardCornerRadius="5dp"
                 >
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="@string/select"
-                app:boxCornerRadiusBottomStart="5dp"
-
-                >
-
-                <AutoCompleteTextView
-                    android:id="@+id/auto_complete_txt"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="none"
-                    android:background="#D2C471"
-                    />
+                    android:layout_height="match_parent"
+                    android:hint="@string/select"
+                    app:boxCornerRadiusBottomStart="5dp"
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    >
+
+                    <AutoCompleteTextView
+                        android:id="@+id/auto_complete_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="none"
+                        android:background="#D2C471"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
             </LinearLayout>
 
             <TextView
