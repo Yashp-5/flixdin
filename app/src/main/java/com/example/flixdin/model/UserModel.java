@@ -14,9 +14,14 @@ public class UserModel {
     private String gender;
     private String bio;
 
-    private ArrayList<UserModel> followers;
+    private ArrayList<String> followers;
+    private ArrayList<String> following;
 
-    private ArrayList<UserModel> following;
+    private ArrayList<String> posts;
+    private ArrayList<String> saved_posts;
+    private ArrayList<String> connectionCalls;
+    private ArrayList<String> applied_connectionCalls;
+    private ArrayList<String> saved_connectionCalls;
 
 
     public UserModel(String userID, String emailID, String fullname,
@@ -108,13 +113,8 @@ public class UserModel {
         this.bio = bio;
     }
 
-    // Also create functions to add/ remove followers/ following from the list
-
-    public ArrayList<UserModel> getFollowers() {
-        return followers;
-    }
-
-    public ArrayList<UserModel> getFollowing() {
-        return following;
+    // Create ConnectionCall
+    public void createConnectionCall(String connectionCallID){
+        connectionCalls.add(connectionCallID);
     }
 }

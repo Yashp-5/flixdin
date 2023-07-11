@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         bottomNavigationView = findViewById(R.id.bottom_nav);
-        homePageToolbar = findViewById(R.id.home_page_toolbar);
+        //homePageToolbar = findViewById(R.id.home_page_toolbar);
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,homeFragment).commit();
