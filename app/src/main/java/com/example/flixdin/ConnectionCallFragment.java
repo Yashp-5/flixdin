@@ -1,5 +1,6 @@
 package com.example.flixdin;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +62,16 @@ public class ConnectionCallFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_connection_call, container, false);
+        View view = inflater.inflate(R.layout.fragment_connection_call, container, false);
+
+        FloatingActionButton floatingActionButton = (FloatingActionButton) view.findViewById(R.id.addConnectionFAB);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addConnectionIntent = new Intent(getContext(), connection_call_card.class);
+                startActivity(addConnectionIntent);
+            }
+        });
+        return view;
     }
 }
