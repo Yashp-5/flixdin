@@ -27,7 +27,7 @@ public class MobileNumberActivity extends AppCompatActivity {
 
         BackButton = findViewById(R.id.back_button);
         NextButton = findViewById(R.id.next_button);
-        email = findViewById(R.id.bday_text);
+        email = findViewById(R.id.creden);
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,14 +47,17 @@ public class MobileNumberActivity extends AppCompatActivity {
                 else
                 {
                     Intent i = new Intent(MobileNumberActivity.this,PasswordActivity.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putString("EMAIL", email.getText().toString());
-                    i.putExtras(bundle);
+
+                    i.putExtra("email",email.getText().toString());
                     startActivity(i);
                 }
 
             }
         });
+
+    }
+    @Override
+    public void onBackPressed() {
 
     }
 }

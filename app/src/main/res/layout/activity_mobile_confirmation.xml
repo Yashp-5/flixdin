@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/bday_text"
+        android:id="@+id/creden"
 
         android:layout_width="359dp"
         android:layout_height="60.16dp"
@@ -87,7 +87,7 @@
         android:textColor="#A4A4A4"
         android:textSize="13sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bday_text" />
+        app:layout_constraintTop_toBottomOf="@+id/creden" />
 
     <Button
         android:id="@+id/next_button"

@@ -1,7 +1,6 @@
 package com.example.flixdin;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.view.ViewCompat;
 
@@ -28,7 +27,7 @@ public class LoginOneActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_one);
         getSupportActionBar().hide();
         email = findViewById(R.id.email);
-        password = findViewById(R.id.passText);
+        password = findViewById(R.id.username);
         LoginButton = findViewById(R.id.login_button);
         SignUpButton = findViewById(R.id.signup_button);
         forgotPass = findViewById(R.id.forgot_pass);
@@ -36,7 +35,7 @@ public class LoginOneActivity extends AppCompatActivity {
         forgotPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(LoginOneActivity.this,ResetPassActivity.class);
+                Intent i = new Intent(LoginOneActivity.this,ResetCredentialActivity.class);
                 startActivity(i);
             }
         });
@@ -85,6 +84,11 @@ public class LoginOneActivity extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    @Override
+    public void onBackPressed() {
 
     }
 }

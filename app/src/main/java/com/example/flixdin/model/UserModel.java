@@ -6,10 +6,13 @@ public class UserModel {
 
     private String userID;
     private String emailID;
+    private String phone;
     private String fullname;
     private String username;
     private String birthday;
     private String domain;
+    private String skill;
+
     private String location;
     private String gender;
     private String bio;
@@ -19,21 +22,29 @@ public class UserModel {
     private ArrayList<UserModel> following;
 
 
-    public UserModel(String userID, String emailID, String fullname,
-                     String username, String birthday, String domain,
-                     String location, String gender, String bio) {
+    public UserModel() {
+    }
+
+    public UserModel(String emailID, String fullname, String username) {
+        this.emailID = emailID;
+        this.fullname = fullname;
+        this.username = username;
+    }
+
+    public UserModel(String userID, String emailID, String phone, String fullname, String username, String birthday, String domain, String skill, String location, String gender, String bio, ArrayList<UserModel> followers, ArrayList<UserModel> following) {
         this.userID = userID;
         this.emailID = emailID;
+        this.phone = phone;
         this.fullname = fullname;
         this.username = username;
         this.birthday = birthday;
         this.domain = domain;
+        this.skill = skill;
         this.location = location;
         this.gender = gender;
         this.bio = bio;
-    }
-
-    public UserModel() {
+        this.followers = followers;
+        this.following = following;
     }
 
     public String getUserID() {
@@ -50,6 +61,14 @@ public class UserModel {
 
     public void setEmailID(String emailID) {
         this.emailID = emailID;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getFullname() {
@@ -84,6 +103,16 @@ public class UserModel {
         this.domain = domain;
     }
 
+    public String getSkill() {
+        return skill;
+    }
+
+    public void setSkill(String skill) {
+        this.skill= skill;
+    }
+
+
+
     public String getLocation() {
         return location;
     }
@@ -108,13 +137,19 @@ public class UserModel {
         this.bio = bio;
     }
 
-    // Also create functions to add/ remove followers/ following from the list
-
     public ArrayList<UserModel> getFollowers() {
         return followers;
     }
 
+    public void setFollowers(ArrayList<UserModel> followers) {
+        this.followers = followers;
+    }
+
     public ArrayList<UserModel> getFollowing() {
         return following;
+    }
+
+    public void setFollowing(ArrayList<UserModel> following) {
+        this.following = following;
     }
 }

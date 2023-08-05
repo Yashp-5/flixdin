@@ -17,10 +17,17 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class DomainActivity extends AppCompatActivity {
     Spinner spinner;
     RadioGroup radioGroup;
     Boolean isClicked = false;
+    FirebaseDatabase database;
+    FirebaseAuth auth;
+    FirebaseUser user;
 
     String selectedDomain="";
 
@@ -76,9 +83,19 @@ public class DomainActivity extends AppCompatActivity {
                     }
                     if(!selectedDomain.equals("Production House"))
                      {
-                    Intent intent = new Intent(DomainActivity.this,WelcomeActivity.class);
+                    Intent intent = new Intent(DomainActivity.this,PreferenceActivity.class);
                     startActivity(intent);
                      }
+
+                    TextView domain = findViewById(R.id.domain_text);
+                    database=FirebaseDatabase.getInstance();
+                    auth=FirebaseAuth.getInstance();
+                    user=auth.getCurrentUser();
+                    database.getReference().child("users").child(user.getDisplayName().toString()).child("domain").setValue(domain.getText().toString());
+
+
+
+
                 }
 
 
@@ -105,6 +122,11 @@ public class DomainActivity extends AppCompatActivity {
 
        // Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(),
         //        Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 
 

@@ -149,6 +149,7 @@
                 android:visibility="invisible">
 
                 <LinearLayout
+                    android:background="@drawable/box2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
@@ -157,11 +158,12 @@
                         android:id="@+id/radio_group"
 
 
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
 
                         android:layout_marginTop="10dp"
-                        android:background="@drawable/box"
+
 
                         android:backgroundTint="@color/domain_radio"
 

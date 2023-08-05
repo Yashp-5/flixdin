@@ -32,5 +32,9 @@ public class TermsActivity extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+
+    }
 
 }

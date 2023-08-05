@@ -41,4 +41,8 @@ public class ResetCodeActivity extends AppCompatActivity {
         });
 
     }
+    @Override
+    public void onBackPressed() {
+
+    }
 }

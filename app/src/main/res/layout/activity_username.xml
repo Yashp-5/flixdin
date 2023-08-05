@@ -29,7 +29,7 @@
             app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/bday_text"
+            android:id="@+id/creden"
             app:boxBackgroundMode="none"
             android:layout_width="359dp"
             android:layout_height="68.16dp"
@@ -56,7 +56,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" >
             <EditText
-                android:id="@+id/passText"
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/box2"
@@ -90,7 +90,7 @@
             app:layout_constraintBottom_toTopOf="@+id/button3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bday_text"
+            app:layout_constraintTop_toBottomOf="@+id/creden"
             app:strokeColor="@color/gold" />
 
         <Button

@@ -22,6 +22,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
             <ImageView
+                android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/arrowback"/>
@@ -33,11 +34,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="17dp"
+            android:layout_marginEnd="26dp"
             android:fontFamily="@font/inter_medium"
-            android:text="Add Top Preference Connections"
+            android:text="Add Other Skills"
             android:textColor="@color/text_color"
             android:textSize="22sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
@@ -50,7 +53,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="23dp"
             android:fontFamily="@font/inter_medium"
-            android:text="Enter the top 3 professional connections you need to make your film."
+            android:text="Add other skills other than the main domain selected."
             android:textColor="#978839"
             android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -60,13 +63,14 @@
         <com.google.android.material.button.MaterialButton
 
             android:id="@+id/next_button"
+            android:textAllCaps="false"
 
             android:layout_width="359dp"
             android:layout_height="60.16dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="26dp"
 
 
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="26dp"
             android:layout_marginBottom="28dp"
 
             android:background="@drawable/box"
@@ -91,6 +95,7 @@
             android:layout_marginBottom="40dp"
             android:background="@drawable/box2"
             android:padding="8dp"
+
             app:layout_constraintBottom_toTopOf="@+id/next_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

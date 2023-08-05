@@ -20,7 +20,14 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 public class PictureActivity extends AppCompatActivity {
 
@@ -130,9 +137,37 @@ public class PictureActivity extends AppCompatActivity {
         {
             Uri sFile = data.getData();
             imageIcon.setImageURI(sFile);
+            FirebaseDatabase database =FirebaseDatabase.getInstance();
+
+            FirebaseStorage storage;
+            storage=FirebaseStorage.getInstance();
+            FirebaseAuth auth = FirebaseAuth.getInstance();
+            FirebaseUser user = auth.getCurrentUser();
+
+            final StorageReference reference = storage.getReference().child("profile_pic")
+                    .child(user.getDisplayName());
+
+            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>()
+            {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            database.getReference().child("users").child(user.getDisplayName()).child("profilePic").setValue(uri.toString());
+
+                        }
+                    });
+
+                }
+            });
 
 
         }
+    }
+    @Override
+    public void onBackPressed() {
+
     }
 
 }

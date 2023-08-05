@@ -18,7 +18,7 @@
 
         android:background="@drawable/box2"
         android:fontFamily="@font/inter_semibold"
-        android:text="Already have an account"
+        android:text="Done"
         android:textAllCaps="false"
 
         android:textColor="#5B4E07"
@@ -48,11 +48,12 @@
         <LinearLayout
 
             android:layout_marginLeft="8dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="0dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
+                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:fontFamily="@font/inter_semibold"
                 android:layout_height="match_parent"

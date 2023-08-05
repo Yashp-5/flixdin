@@ -7,10 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Calendar;
 
@@ -23,16 +26,22 @@ public class BirthdayActivity extends AppCompatActivity {
         setContentView(R.layout.activity_birthday);
         getSupportActionBar().hide();
         Button NextButton = findViewById(R.id.next_button);
+        BdayText = findViewById(R.id.creden);
         NextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(BirthdayActivity.this,UsernameActivity.class);
+
+                FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                FirebaseAuth auth = FirebaseAuth.getInstance();
+                FirebaseUser userFB = auth.getCurrentUser();
+                firebaseDatabase.getReference().child("users").child(userFB.getDisplayName()).child("birthday").setValue(BdayText.getText().toString());
+                Intent intent = new Intent(BirthdayActivity.this,TermsActivity.class);
                 startActivity(intent);
             }
         });
 
 
-        BdayText = findViewById(R.id.bday_text);
+        BdayText = findViewById(R.id.creden);
         Calendar calendar = Calendar.getInstance();
         int year = calendar.get(Calendar.YEAR);
         int day = calendar.get(Calendar.DAY_OF_MONTH);
@@ -62,6 +71,10 @@ public class BirthdayActivity extends AppCompatActivity {
         });
 
 
+
+    }
+    @Override
+    public void onBackPressed() {
 
     }
 

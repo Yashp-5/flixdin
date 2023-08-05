@@ -23,7 +23,7 @@ public class MobileConfirmationActivity extends AppCompatActivity {
         BackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(MobileConfirmationActivity.this,PasswordActivity.class);
+                Intent i =new Intent(MobileConfirmationActivity.this,UsernameActivity.class);
 
                 startActivity(i);
             }
@@ -31,7 +31,7 @@ public class MobileConfirmationActivity extends AppCompatActivity {
         NextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MobileConfirmationActivity.this,NameActivity.class);
+                Intent intent = new Intent(MobileConfirmationActivity.this,LoginSaveActivity.class);
                 startActivity(intent);
             }
         });
