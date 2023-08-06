@@ -159,6 +159,7 @@ public class connection_call_card extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String add = uri.toString();
                 Glide.with(getApplicationContext()).load(add).into(profile_imageView);
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -193,12 +194,9 @@ public class connection_call_card extends AppCompatActivity {
         // Upload the connection call to firebase
         databaseReference_connection.child(connectionCallID).setValue(connectionCallModel);
 
-
         // Add the connection call ID to user's connection call list
         databaseReference_user.child("connectionCalls").setValue(connectionCallID);
 
     }
-
-
 
 }

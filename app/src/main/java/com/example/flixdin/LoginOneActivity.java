@@ -49,7 +49,7 @@ public class LoginOneActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Intent i =new Intent(LoginOneActivity.this,MobileNumberActivity.class);
+                    Intent i =new Intent(LoginOneActivity.this,MainActivity.class);
                     ActivityOptionsCompat optionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(LoginOneActivity.this,SignUpButton, ViewCompat.getTransitionName(SignUpButton));
 
                     startActivity(i,optionsCompat.toBundle());
