@@ -1,64 +1,70 @@
 package com.example.flixdin;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
-import android.widget.Toolbar;
+import android.widget.EditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-    Toolbar homePageToolbar;
-    Toolbar connectionCallToolbar;
+    EditText searchButton;
 
-    HomeFragment homeFragment = new HomeFragment();
-    SearchFragment searchFragment = new SearchFragment();
-    ConnectionCallFragment connectionCallFragment = new ConnectionCallFragment();
-    FlixFragment flixFragment = new FlixFragment();
-    ProfileFragment profileFragment = new ProfileFragment();
+    ChatFragment chatFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
 
-        bottomNavigationView = findViewById(R.id.bottom_nav);
-        //homePageToolbar = findViewById(R.id.home_page_toolbar);
+        chatFragment = new ChatFragment();
 
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,homeFragment).commit();
 
-        bottomNavigationView.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()){
-                case R.id.home:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,homeFragment).commit();
-                    return true;
-                case R.id.search:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,searchFragment).commit();
-                    return true;
-                case R.id.connectioncall:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,connectionCallFragment).commit();
-                    return true;
-                case R.id.flix:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,flixFragment).commit();
-                    return true;
-                case R.id.profile:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.flFragment,profileFragment).commit();
-                    return true;
-            }
-            return false;
+        searchButton = findViewById(R.id.search_bar);
+
+        searchButton.setOnClickListener((v)->{
+            startActivity(new Intent(MainActivity.this,SearchUserActivity.class));
         });
 
         FirebaseAuth auth;
         auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
 
-        
+
+        bottomNavigationView.setSelectedItemId(R.id.menu_chat);
+
+
+
+    }
+
+    void getFCMToken(){
+        FirebaseMessaging.getInstance().getToken().addOnCompleteListener(task -> {
+                if(task.isSuccessful()){
+                    String token = task.getResult();
+                    FirebaseUtil.currentUserDetails().update("fcmToken",token);
+
+                }
+        });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

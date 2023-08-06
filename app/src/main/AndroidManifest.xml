@@ -12,33 +12,38 @@
         android:theme="@style/Theme.Flixdin"
         tools:targetApi="31">
         <activity
-            android:name=".ResetCredentialActivity"
+            android:name="Adapter.RecentChatRecyclerAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ChatFragment"
+            android:exported="false" />
+        <activity
+            android:name=".chat_home"
+            android:exported="false" />
+        <activity
+            android:name=".CHAT.ChatList"
+            android:exported="false" />
+        <activity
+            android:name=".connection_call_card"
             android:exported="false" />
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".PreferenceActivity"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".connection_call_card"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ResetPassActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ResetCodeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".DomainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ProductionVerificationActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".PictureActivity"
             android:exported="true" />
@@ -65,9 +70,7 @@
             android:exported="false" />
         <activity
             android:name=".MobileNumberActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".LoginOneActivity"
             android:exported="true" />
@@ -79,22 +82,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>

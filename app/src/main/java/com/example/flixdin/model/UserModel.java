@@ -6,45 +6,39 @@ public class UserModel {
 
     private String userID;
     private String emailID;
-    private String phone;
     private String fullname;
     private String username;
     private String birthday;
     private String domain;
-    private String skill;
-
     private String location;
     private String gender;
     private String bio;
 
-    private ArrayList<UserModel> followers;
+    private ArrayList<String> followers;
+    private ArrayList<String> following;
 
-    private ArrayList<UserModel> following;
+    private ArrayList<String> posts;
+    private ArrayList<String> saved_posts;
+    private ArrayList<String> connectionCalls;
+    private ArrayList<String> applied_connectionCalls;
+    private ArrayList<String> saved_connectionCalls;
 
 
-    public UserModel() {
-    }
-
-    public UserModel(String emailID, String fullname, String username) {
-        this.emailID = emailID;
-        this.fullname = fullname;
-        this.username = username;
-    }
-
-    public UserModel(String userID, String emailID, String phone, String fullname, String username, String birthday, String domain, String skill, String location, String gender, String bio, ArrayList<UserModel> followers, ArrayList<UserModel> following) {
+    public UserModel(String userID, String emailID, String fullname,
+                     String username, String birthday, String domain,
+                     String location, String gender, String bio) {
         this.userID = userID;
         this.emailID = emailID;
-        this.phone = phone;
         this.fullname = fullname;
         this.username = username;
         this.birthday = birthday;
         this.domain = domain;
-        this.skill = skill;
         this.location = location;
         this.gender = gender;
         this.bio = bio;
-        this.followers = followers;
-        this.following = following;
+    }
+
+    public UserModel() {
     }
 
     public String getUserID() {
@@ -61,14 +55,6 @@ public class UserModel {
 
     public void setEmailID(String emailID) {
         this.emailID = emailID;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getFullname() {
@@ -103,16 +89,6 @@ public class UserModel {
         this.domain = domain;
     }
 
-    public String getSkill() {
-        return skill;
-    }
-
-    public void setSkill(String skill) {
-        this.skill= skill;
-    }
-
-
-
     public String getLocation() {
         return location;
     }
@@ -137,19 +113,8 @@ public class UserModel {
         this.bio = bio;
     }
 
-    public ArrayList<UserModel> getFollowers() {
-        return followers;
-    }
-
-    public void setFollowers(ArrayList<UserModel> followers) {
-        this.followers = followers;
-    }
-
-    public ArrayList<UserModel> getFollowing() {
-        return following;
-    }
-
-    public void setFollowing(ArrayList<UserModel> following) {
-        this.following = following;
+    // Create ConnectionCall
+    public void createConnectionCall(String connectionCallID){
+        connectionCalls.add(connectionCallID);
     }
 }
